@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Shareable Resume Builder</h1>
+    <form id="resume-form">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your Username" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+
+            <label for="fathersname">Father's Name:</label>
+            <input type="fathersname" id="fathersname" placeholder="Enter Your Father's Name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="surname" id="surname" placeholder="Enter Your Surname" required>
+
+            <label for="dateofbirth"> Date Of Birth:</label>
+            <input type="dateofbirth" id="dateofbirth" placeholder="MM/DD/YYYY" required>
+
+            <label for="nic">CNIC #:</label>
+            <input type="nic" id="nic" placeholder="*****-********-*" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="abcd@gmail.com" required>
+            
+            <label for="phone">Phone no:</label>
+            <input type="phone" id="phone" placeholder="(+92**********)" required>
+
+            <label for="address">Current Address:</label>
+            <input type="address" id="address" placeholder="Enter Your Address" row="2" required>
+
+            <label for="status">Marital Status:</label>
+            <input type="status" id="status" placeholder="Single, Married..." required>
+
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>Objective</legend>
+            <label for="objective">Objective:</label>
+            <textarea id="objective" placeholder="Enter Your Career Objective" row="3" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Qualification</legend>
+            <label for="education">Education:</label>
+            <textarea id="education" placeholder="Education (e.g., B.Sc. in Computer Science)" rows="5" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Other Qualification</legend>
+            <label for="othereducation">Short Courses:</label>
+            <textarea id="othereducation" placeholder="Short Courses (Optional)" rows="3" ></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience:</label>
+            <textarea id="experience" placeholder="Work Experience (e.g., Software Developer at XYZ)" Row="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills:</label>
+            <textarea id="skills" placeholder="Skills (e.g., JavaScript, TypeScript)" Row="4" required></textarea>
+        </fieldset>
+
+        <button type="submit"><b>Generate Resume</b></button>
+    </form>
+
+    <br>
+
+    <!-- Dynamic and Editable Resume -->
+    <div id="resume-display" contenteditable="true">
+    <!-- resume will be generated below -->
+    </div>
+
+    <br>
+
+    <!-- Section for the Shareable link and Download option -->
+    <div id="shareable-link-container" style="display: none;">
+        <h2>Shareable Link</h2>
+        <p>Here is your unique link to view or edit your resume:</p>
+        <a href="#" id="shareable-link" target="-blank"></a>
+        <br>
+        <button id="download-pdf"><b>Download as PDF</b></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
